@@ -1,3 +1,7 @@
+# Duke - VM's and Containers Week 2 Reading 3 -  How to deploy and-or run containerized flask app using different methodologies
+
+## See below for implementations
+
 [![Python application test with Github Actions](https://github.com/noahgift/Python-MLOps-Cookbook/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/noahgift/Python-MLOps-Cookbook/actions/workflows/pythonapp.yml)
 [![Python application test with AWS Code Builde](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiSjN4ZXRiNllSOVlYWmZqQ2tyS05OOC8wUElNZ05uUFZkVDdKSHVrNzU2L2FzajJXUmlKUngxUkFvOGFTaStMNW9rOUJSS0VTWFRadVpHdWgyN1BLMjA4PSIsIml2UGFyYW1ldGVyU3BlYyI6IjB0anA4VWxkNFBvejJIcE0iLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=main)
 
@@ -28,7 +32,7 @@ Feel free to test my ML project:  `docker pull ghcr.io/noahgift/python-mlops-coo
 
 ![Course2-Duke-Flask-Containerized](https://user-images.githubusercontent.com/58792/110816231-289cd880-8259-11eb-8ab7-45c4ef5190ad.png)
 
-### CLI Tools
+# CLI Tools
 
 There are two CLI tools.  First, the main `cli.py` is the endpoint that serves out predictions.
 To predict the height of an MLB player you use the following: ` ./cli.py --weight 180`
@@ -52,11 +56,11 @@ This is accomplished through the requests library.
 
 
 
-### Flask Microservice
+# Flask Microservice
 
 The Flask ML Microservice can be run many ways.
 
-#### Containerized Flask Microservice Locally
+## Containerized Flask Microservice Locally
 
 You can run the Flask Microservice as follows with the commmand: `python app.py`.
 
@@ -88,7 +92,7 @@ Port: 8080
 ```
 
 
-#### Containerized Flask Microservice
+## Containerized Flask Microservice
 
 Here is an example of how to build the container and run it locally, this is the contents of [predict.sh](https://github.com/noahgift/Python-MLOps-Cookbook/blob/main/predict.sh)
 
@@ -106,7 +110,7 @@ docker image ls
 docker run -p 127.0.0.1:8080:8080 noahgift/mlops-cookbook
 ```
 
-#### Automatically Build Container via Github Actions and Push to Github Container Registery
+## Automatically Build Container via Github Actions and Push to Github Container Registery
 
 To setup the container build process do the following.  This is also covered by Alfredo Deza in Practical MLOps book in greater detail.
 
@@ -133,41 +137,41 @@ To setup the container build process do the following.  This is also covered by 
 
 ![container-registry](https://user-images.githubusercontent.com/58792/111001486-d8ee0800-8351-11eb-984a-967558023cc8.png)
 
-#### Automatically Build Container via Github Actions and Push to Dockerhub Container Registery
+## Automatically Build Container via Github Actions and Push to Dockerhub Container Registery
 
 
-## Build Targets
+# Build Targets
 
 With the project using DevOps/MLOps best practices including linting, testing, and deployment, this project can be the base to deploy to many deployment targets.
 
 [In progress....]
 
 
-### Other Tools and Frameworks
+## Other Tools and Frameworks
 
 [In progress....]
 
-#### FastAPI
+## FastAPI
 
 * [fastapi](https://fastapi.tiangolo.com)
 
 
-### AWS
+# AWS
 
-#### Elastic Beanstalk
+## Elastic Beanstalk
 
-#### AWS Lambda Recipes
+## AWS Lambda Recipes
 
 Install [SAM as documented here](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html), AWS Cloud9 has it installed already.
 
 You can [find the recipes here](https://github.com/noahgift/Python-MLOps-Cookbook/tree/main/recipes/aws-lambda-sam)
 
 
-##### AWS Lambda-SAM Local
+### AWS Lambda-SAM Local
 
 ![sam-directory-layout](https://user-images.githubusercontent.com/58792/111075610-32277a00-84bf-11eb-9f61-41adc9f97a21.png)
 
-##### AWS Lambda-SAM Containerized Deploy
+### AWS Lambda-SAM Containerized Deploy
 
 Follow recipe in recipe section.
 
@@ -187,21 +191,21 @@ Another way is the the tool "Postman":
 
 
 
-#### AWS App Runner
+## AWS App Runner
 
 Watch a YouTube Walkthrough on AWS App Runner for this repo here:  https://www.youtube.com/watch?v=zzNnxDTWtXA
 
 ![mlops](https://user-images.githubusercontent.com/58792/119266194-d3196c00-bbb7-11eb-929e-77718411ffd5.jpg)
 
-#### AWS Co-Pilot
+## AWS Co-Pilot
 
 
 Following setup here and then deploy project using cli
 https://docs.aws.amazon.com/AmazonECS/latest/developerguide/getting-started-aws-copilot-cli.html
 
-### GCP
+# GCP
 
-#### Cloudrun (CaaS:  Container as a Service)
+## Cloudrun (CaaS:  Container as a Service)
 
 It is trivial (if you select project):
 
@@ -216,11 +220,11 @@ D.  Verify it works by using `./utilscli.py`
 
 
 
-#### App Engine
+## App Engine
 
-#### GKE (Kubernetes)
+## GKE (Kubernetes)
 
-### Azure App Services
+# Azure App Services
 
 
 ## Production Patterns
@@ -231,7 +235,7 @@ D.  Verify it works by using `./utilscli.py`
 * Load-testing
 
 
-## DataScience Workflow
+# DataScience Workflow
 
 ![mlb-ht-wt](https://user-images.githubusercontent.com/58792/110829008-a7980e00-8265-11eb-883d-4a87fe6f0a84.png)
 
